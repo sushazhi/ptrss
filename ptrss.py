@@ -100,7 +100,8 @@ class Rss():
         }
 
     def _request(self, url):
-        resp = requests.get(url, headers=self.headers, verify=False, allow_redirects=False, timeout=30)
+        #resp = requests.get(url, headers=self.headers, verify=False, allow_redirects=False, timeout=30)
+        resp = requests.get(url, headers=self.headers, verify=False, allow_redirects=False, timeout=30) #2020.8.8 MT需将allow_redirects=False改为allow_redirects=True,否则一直报错"Can't login, Check your cookie"
         if resp.status_code == 302:
             raise RuntimeError("Can't login, Check your cookie")
         return resp
