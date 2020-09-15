@@ -6,7 +6,7 @@ N1安装entware
 ```shell
 src/gz entware https://bin.entware.net/aarch64-k3.10/ 
 ```
-* 执行以下命令
+* 执行以下命令(有ipv6,可修改/etc/hosts,添加bin.entware.net的ipv6 hosts)
 ```shell
 mv /etc/opkg/hacklog.conf /etc/opkg/hacklog.conf.bak
 sh /opt/entware_aarch64-k3.10_init.sh
@@ -16,6 +16,7 @@ sh /opt/entware_aarch64-k3.10_init.sh
 -----
 ```shell
 /opt/bin/opkg install python3 python3-pip python3-setuptools python3-lib2to3 python3-requests python3-lxml python3-sqlite3
+/opt/bin/pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 /opt/bin/pip3 install --upgrade pip
 /opt/bin/pip3 install --upgrade setuptools
 /opt/bin/pip3 install feedparser pyyaml
