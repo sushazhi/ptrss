@@ -16,7 +16,7 @@ sh /opt/entware_aarch64-k3.10_init.sh
 -----
 ```shell
 /opt/bin/opkg install python3 python3-pip python3-setuptools python3-lib2to3 python3-requests python3-lxml python3-sqlite3
-/opt/bin/pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+/opt/bin/pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 /opt/bin/pip3 install --upgrade pip
 /opt/bin/pip3 install --upgrade setuptools
 /opt/bin/pip3 install feedparser pyyaml
